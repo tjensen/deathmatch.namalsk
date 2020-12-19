@@ -51,26 +51,6 @@ void main()
 
 class CustomMission: MissionServer
 {
-	override void OnInit()
-	{
-		super.OnInit();
-
-		// this piece of code is recommended otherwise event system is switched on automatically and runs from default values
-		// comment this whole block if NOT using Namalsk Survival
-		if ( m_EventManagerServer )
-		{
-			// enable/disable event system, min time between events, max time between events
-            m_EventManagerServer.OnInitServer( true, 600, 800 );
-            // Register possible events along with their probability (0..1)
-	    // any custom events MUST inherit from EventBase, otherwise they will fail to load!
-            m_EventManagerServer.RegisterEvent( Aurora, 1.0 );
-            m_EventManagerServer.RegisterEvent( Blizzard, 0.5 );
-            m_EventManagerServer.RegisterEvent( ExtremeCold, 0.4 );
-            m_EventManagerServer.RegisterEvent( Snowfall, 0.8 );
-            m_EventManagerServer.RegisterEvent( EVRStorm, 0.25 );
-		}
-	}
-
 	void SetRandomHealth(EntityAI itemEnt)
 	{
 		if (itemEnt)
