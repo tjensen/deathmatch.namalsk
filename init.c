@@ -81,7 +81,6 @@ class CustomMission: MissionServer
     static private int DEFAULT_ROUND_DURATION = 30;
     static private int COUNTDOWN_DURATION_MS = 10000;
 
-    static private const vector LIMBO_POSITON = "7270.39 293.398 2923.94";
     static private const vector PLAYAREA_CENTER = "6767 0 11261";
     static private const int CLEANUP_RADIUS = 600;
     static private const int KILL_RADIUS = 570;
