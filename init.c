@@ -251,19 +251,20 @@ class CustomMission: MissionServer
 
         if (m_settings.christmas)
         {
+            game.CreateObject("ChristmasTree_Green", "6777.04 15.0711 11281.7", false, false, false);
             game.CreateObject("ChristmasTree_Green", "7343.07 287.052 2614.94", false, false, false);
 
-            GameInventory box1 = ItemBase.Cast(game.CreateObject("GiftBox_Large_1", "7338.07 287.052 2614.94", false, false, false)).GetInventory();
+            GameInventory box1 = ItemBase.Cast(game.CreateObject("GiftBox_Large_1", "6772.04 15.0711 11281.7", false, false, false)).GetInventory();
             GameInventory megaphone = box1.CreateInInventory("Megaphone").GetInventory();
             megaphone.CreateAttachment("Battery9V");
 
-            GameInventory box2 = ItemBase.Cast(game.CreateObject("GiftBox_Large_2", "7348.07 287.052 2614.94", false, false, false)).GetInventory();
+            GameInventory box2 = ItemBase.Cast(game.CreateObject("GiftBox_Large_2", "6782.04 15.0711 11281.7", false, false, false)).GetInventory();
             box2.CreateInInventory("AK_Suppressor");
             box2.CreateInInventory("M4_Suppressor");
             box2.CreateInInventory("PistolSuppressor");
             box2.CreateInInventory("ImprovisedSuppressor");
 
-            GameInventory box3 = ItemBase.Cast(game.CreateObject("GiftBox_Large_3", "7343.07 287.052 2609.94", false, false, false)).GetInventory();
+            GameInventory box3 = ItemBase.Cast(game.CreateObject("GiftBox_Large_3", "6777.04 15.0711 11276.7", false, false, false)).GetInventory();
             box3.CreateInInventory("M18SmokeGrenade_Green");
             box3.CreateInInventory("M18SmokeGrenade_Red");
             box3.CreateInInventory("M18SmokeGrenade_Green");
@@ -275,7 +276,7 @@ class CustomMission: MissionServer
             box3.CreateInInventory("M18SmokeGrenade_Green");
             box3.CreateInInventory("M18SmokeGrenade_Red");
 
-            GameInventory box4 = ItemBase.Cast(game.CreateObject("GiftBox_Large_4", "7343.07 287.052 2619.94", false, false, false)).GetInventory();
+            GameInventory box4 = ItemBase.Cast(game.CreateObject("GiftBox_Large_4", "6777.04 15.0711 11286.7", false, false, false)).GetInventory();
             GameInventory deagle = box4.CreateInInventory("Deagle_Gold").GetInventory();
             deagle.CreateAttachment("PistolOptic");
             deagle.CreateAttachment("PistolSuppressor");
