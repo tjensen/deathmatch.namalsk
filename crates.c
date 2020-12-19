@@ -1,19 +1,19 @@
 class CratePositions
 {
     private ref TVectorArray m_positions = {
-        "7332.09 295.650 2667.92",  // on top of pipes by crater
-        "7304.11 300.059 2850.14",  // on top of red brick warehouse
-        "7373.78 296.850 2570.04",  // on white smokestack
-        "7356.93 292.834 2825.19",  // on red guardhouse by fallen smokestack
-        "7274.52 301.360 2951.12",  // on metal carport at north end of area
-        "7303.02 297.038 2916.59",  // on long shed by unenterable warehouse
-        "7313.10 293.887 2877.93",  // on pump house by pipes at north end
-        "7300.19 291.888 2835.65",  // on yellow container by red warehouse
-        "7346.53 282.017 2651.65",  // in cab of wrecked truck in crater
-        "7297.61 293.265 2574.91",  // on Livonia grey warehouse at SW corner
-        "7707.75 306.870 2725.75",  // on middle silo at Eastern edge
-        "7367.28 290.383 2622.74",  // on yellow guardhouse by crater
-        "7480.80 292.892 2515.61",  // on pipes by barracks
+        "6842.43 17.8126 11334.8",  // on top of yellow shipping container by North supermarket
+        "6880.36 39.3823 11188.8",  // on vanilla construction crane
+        "6863.28 58.3616 11298.7",  // on roof of East tall apartments
+        "6744.81 58.1088 11372.8",  // on roof of West tall apartments
+        "6599.16 58.3829 11338.0",  // on highest platform of smokestack
+        "6590.21 40.9144 11366.2",  // on roof of factory stairwell
+        "6943.16 33.5509 11463.6",  // on top of fire station tower
+        "6809.60 26.5908 11251.0",  // on roof of school over cafeteria
+        "6755.90 32.5514 10983.6",  // on highest roof of office building
+        "6752.06 35.3789 11072.7",  // on roof of mod 4-story apartments with scaffolding
+        "6988.18 45.7096 11285.9",  // on elevator shaft roof of Eastmost 8-story mod apartments
+        "6591.33 45.1149 11263.2",  // on elevator shaft roof of Westmost 8-story mod apartments
+        "6659.83 71.1773 11414.1",  // on mod construction crane at end of arm
     };
     private int m_crateIndex = 0;
 
@@ -67,19 +67,19 @@ class Crates
     };
 
     static private ref TVectorArray m_positions = {
-        "7332.09 295.650 2667.92",  // on top of pipes by crater
-        "7304.11 300.059 2850.14",  // on top of red brick warehouse
-        "7373.78 296.850 2570.04",  // on white smokestack
-        "7356.93 292.834 2825.19",  // on red guardhouse by fallen smokestack
-        "7274.52 301.360 2951.12",  // on metal carport at north end of area
-        "7303.02 297.038 2916.59",  // on long shed by unenterable warehouse
-        "7313.10 293.887 2877.93",  // on pump house by pipes at north end
-        "7300.19 291.888 2835.65",  // on yellow container by red warehouse
-        "7346.53 282.017 2651.65",  // in cab of wrecked truck in crater
-        "7297.61 293.265 2574.91",  // on Livonia grey warehouse at SW corner
-        "7707.75 306.870 2725.75",  // on middle silo at Eastern edge
-        "7367.28 290.383 2622.74",  // on yellow guardhouse by crater
-        "7480.80 292.892 2515.61",  // on pipes by barracks
+        "6842.43 17.8126 11334.8",  // on top of yellow shipping container by North supermarket
+        "6880.36 39.3823 11188.8",  // on vanilla construction crane
+        "6863.28 58.3616 11298.7",  // on roof of East tall apartments
+        "6744.81 58.1088 11372.8",  // on roof of West tall apartments
+        "6599.16 58.3829 11338.0",  // on highest platform of smokestack
+        "6590.21 40.9144 11366.2",  // on roof of factory stairwell
+        "6943.16 33.5509 11463.6",  // on top of fire station tower
+        "6809.60 26.5908 11251.0",  // on roof of school over cafeteria
+        "6755.90 32.5514 10983.6",  // on highest roof of office building
+        "6752.06 35.3789 11072.7",  // on roof of mod 4-story apartments with scaffolding
+        "6988.18 45.7096 11285.9",  // on elevator shaft roof of Eastmost 8-story mod apartments
+        "6591.33 45.1149 11263.2",  // on elevator shaft roof of Westmost 8-story mod apartments
+        "6659.83 71.1773 11414.1",  // on mod construction crane at end of arm
     };
     static private int m_crateIndex = 0;
 
