@@ -1,9 +1,9 @@
-#include "$CurrentDir:\\mpmissions\\deathmatch.enoch\\clothes.c"
-#include "$CurrentDir:\\mpmissions\\deathmatch.enoch\\crates.c"
-#include "$CurrentDir:\\mpmissions\\deathmatch.enoch\\infected.c"
-#include "$CurrentDir:\\mpmissions\\deathmatch.enoch\\limbo.c"
-#include "$CurrentDir:\\mpmissions\\deathmatch.enoch\\settings.c"
-#include "$CurrentDir:\\mpmissions\\deathmatch.enoch\\weapons.c"
+#include "$CurrentDir:\\mpmissions\\deathmatch.namalsk\\clothes.c"
+#include "$CurrentDir:\\mpmissions\\deathmatch.namalsk\\crates.c"
+#include "$CurrentDir:\\mpmissions\\deathmatch.namalsk\\infected.c"
+#include "$CurrentDir:\\mpmissions\\deathmatch.namalsk\\limbo.c"
+#include "$CurrentDir:\\mpmissions\\deathmatch.namalsk\\settings.c"
+#include "$CurrentDir:\\mpmissions\\deathmatch.namalsk\\weapons.c"
 
 
 void main()
