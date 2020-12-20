@@ -81,6 +81,7 @@ class CustomMission: MissionServer
     static private int DEFAULT_ROUND_DURATION = 30;
     static private int COUNTDOWN_DURATION_MS = 10000;
 
+    static private const vector CHRISTMAS_TREE_POSITION = "6777.04 15.0711 11281.7";
     static private const vector PLAYAREA_CENTER = "6767 0 11261";
     static private const int CLEANUP_RADIUS = 600;
     static private const int KILL_RADIUS = 570;
@@ -115,6 +116,10 @@ class CustomMission: MissionServer
         m_settings.load();
 
         game.GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(this.CheckPlayerPositions, 10000, true);
+
+        if (m_settings.christmas) {
+            game.CreateObject("ChristmasTree_Green", CHRISTMAS_TREE_POSITION, false, false, false);
+        }
 
         this.RollForCowboyRound();
         this.CleanupObjectsAndStartRound();
@@ -250,20 +255,17 @@ class CustomMission: MissionServer
 
         if (m_settings.christmas)
         {
-            game.CreateObject("ChristmasTree_Green", "6777.04 15.0711 11281.7", false, false, false);
-            game.CreateObject("ChristmasTree_Green", "7343.07 287.052 2614.94", false, false, false);
-
-            GameInventory box1 = ItemBase.Cast(game.CreateObject("GiftBox_Large_1", "6772.04 15.0711 11281.7", false, false, false)).GetInventory();
+            GameInventory box1 = ItemBase.Cast(game.CreateObject("GiftBox_Large_1", CHRISTMAS_TREE_POSITION + "-5 0 0", false, false, false)).GetInventory();
             GameInventory megaphone = box1.CreateInInventory("Megaphone").GetInventory();
             megaphone.CreateAttachment("Battery9V");
 
-            GameInventory box2 = ItemBase.Cast(game.CreateObject("GiftBox_Large_2", "6782.04 15.0711 11281.7", false, false, false)).GetInventory();
+            GameInventory box2 = ItemBase.Cast(game.CreateObject("GiftBox_Large_2", CHRISTMAS_TREE_POSITION + "5 0 0", false, false, false)).GetInventory();
             box2.CreateInInventory("AK_Suppressor");
             box2.CreateInInventory("M4_Suppressor");
             box2.CreateInInventory("PistolSuppressor");
             box2.CreateInInventory("ImprovisedSuppressor");
 
-            GameInventory box3 = ItemBase.Cast(game.CreateObject("GiftBox_Large_3", "6777.04 15.0711 11276.7", false, false, false)).GetInventory();
+            GameInventory box3 = ItemBase.Cast(game.CreateObject("GiftBox_Large_3", CHRISTMAS_TREE_POSITION + "0 0 -5", false, false, false)).GetInventory();
             box3.CreateInInventory("M18SmokeGrenade_Green");
             box3.CreateInInventory("M18SmokeGrenade_Red");
             box3.CreateInInventory("M18SmokeGrenade_Green");
@@ -275,7 +277,7 @@ class CustomMission: MissionServer
             box3.CreateInInventory("M18SmokeGrenade_Green");
             box3.CreateInInventory("M18SmokeGrenade_Red");
 
-            GameInventory box4 = ItemBase.Cast(game.CreateObject("GiftBox_Large_4", "6777.04 15.0711 11286.7", false, false, false)).GetInventory();
+            GameInventory box4 = ItemBase.Cast(game.CreateObject("GiftBox_Large_4", CHRISTMAS_TREE_POSITION + "0 0 5", false, false, false)).GetInventory();
             GameInventory deagle = box4.CreateInInventory("Deagle_Gold").GetInventory();
             deagle.CreateAttachment("PistolOptic");
             deagle.CreateAttachment("PistolSuppressor");
@@ -416,13 +418,6 @@ class CustomMission: MissionServer
             {
                 Print("Cleaning up " + creature);
                 creature.Delete();
-            }
-
-            ChristmasTree_Green tree = ChristmasTree_Green.Cast(obj);
-            if (tree != null)
-            {
-                Print("Cleaning up " + tree);
-                tree.Delete();
             }
 
             PlayerBase player = PlayerBase.Cast(obj);
@@ -678,4 +673,6 @@ class CustomMission: MissionServer
 Mission CreateCustomMission(string path)
 {
     return new CustomMission();
-};
+}
+
+// vim:ft=cs
