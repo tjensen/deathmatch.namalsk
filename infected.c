@@ -125,17 +125,28 @@ class Infected
     }
 
     static void Spawn(
-            CGame game, int playerCount, int playerScaleFactor, int minimum, int maximum,
-            bool christmas, bool cowboy)
+            CGame game, int playerCount, DeathmatchSettings settings, bool cowboy)
     {
-        int infectedCount = playerCount * playerScaleFactor;
-        if (infectedCount < minimum) infectedCount = minimum;
-        if (infectedCount > maximum) infectedCount = maximum;
+        if (playerCount >= settings.forceInfectedPlayerLimit)
+        {
+            if (settings.infectedChance <= 0 || Math.RandomInt(0, 100) >= settings.infectedChance)
+            {
+                return;
+            }
+        }
+        else
+        {
+            Print("Player count is less than the force infected limit.");
+        }
+
+        int infectedCount = playerCount * settings.infectedPlayerFactor;
+        if (infectedCount < settings.minimumInfected) infectedCount = settings.minimumInfected;
+        if (infectedCount > settings.maximumInfected) infectedCount = settings.maximumInfected;
 
         Print("Spawning " + infectedCount + " infected");
         for (int i = 0; i < infectedCount; i++)
         {
-            string infectedType = InfectedType(christmas);
+            string infectedType = InfectedType(settings.christmas);
             vector position = POSITIONS.GetRandomElement();
             Object infected = game.CreateObject(infectedType, position, false, true, true);
             if (cowboy)
@@ -143,7 +154,7 @@ class Infected
                 EntityAI.Cast(infected).GetInventory().CreateAttachment(
                         COWBOY_HATS.GetRandomElement());
             }
-            else if (christmas)
+            else if (settings.christmas)
             {
                 EntityAI.Cast(infected).GetInventory().CreateAttachment("SantasHat");
             }

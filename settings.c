@@ -11,6 +11,7 @@ class DeathmatchSettings : Managed
 
     int infectedChance = 0;
     int infectedPlayerFactor = 0;
+    int forceInfectedPlayerLimit = 0;
     int minimumInfected = 0;
     int maximumInfected = 0;
 
@@ -35,6 +36,8 @@ class DeathmatchSettings : Managed
 
         if (this.infectedPlayerFactor < 1) this.infectedPlayerFactor = 5;
         Print("Infected player factor: " + this.infectedPlayerFactor);
+
+        Print("Force infected player limit: " + this.forceInfectedPlayerLimit);
 
         if (this.minimumInfected < 1) this.minimumInfected = 25;
         Print("Minimum infected: " + this.minimumInfected);
